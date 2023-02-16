@@ -2,10 +2,7 @@ package com.example.demo.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
@@ -13,6 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "student")
+@Builder
+@ToString
 public class Student {
 
    @Id
@@ -24,5 +23,11 @@ public class Student {
 
    @Column(name = "gpa")
    private Double gpa;
+
+
+   @OneToOne(optional = false)
+   @JoinColumn(name = "name", updatable = false, insertable = false, referencedColumnName = "author")
+   private Book book;
+
 
 }
