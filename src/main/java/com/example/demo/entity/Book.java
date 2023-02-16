@@ -1,6 +1,7 @@
-package com.example.demo;
+package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,16 +10,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "book")
 public class Book {
 
     @Id
     @Column(name = "id")
     private Long id;
 
-
     @Column(name = "author")
-    @OneToOne
-    @JoinColumn(name = "name")
     private String author;
 
     @Column(name = "price")
@@ -26,4 +26,5 @@ public class Book {
 
     @Column(name = "title")
     private String title;
+
 }
