@@ -20,7 +20,11 @@ public class DataLoader {
     public ApplicationRunner applicationRunner() {
         return args -> {
             bookRepository.save(new Book(1L, "Hippo", 9.99, "Hippo Study"));
-            studentRepository.save(new Student(1L, "Hippo", 3.99));
+            studentRepository.save(Student.builder()
+                            .id(1L)
+                            .name("Hippo")
+                            .gpa(3.99)
+                    .build());
         };
     }
 }
