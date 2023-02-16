@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Student;
