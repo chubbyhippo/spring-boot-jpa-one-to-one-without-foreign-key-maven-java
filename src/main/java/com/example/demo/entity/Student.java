@@ -24,7 +24,6 @@ public class Student {
    @Column(name = "gpa")
    private Double gpa;
 
-
    @OneToOne(optional = false)
    @JoinColumn(name = "name", updatable = false, insertable = false, referencedColumnName = "author")
    private Book book;
