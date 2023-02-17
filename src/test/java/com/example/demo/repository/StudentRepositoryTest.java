@@ -13,8 +13,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StudentRepositoryTest {
 
     @Test
-    void shouldGetStudentBooks(@Autowired StudentRepository repository) {
-        repository.findStudentBooks().forEach(studentBookDto -> {
+    void shouldGetStudentBooksDtoInterface(@Autowired StudentRepository repository) {
+        repository.findStudentBooksDtoInterface().forEach(studentBookDto -> {
 
             assertThat(studentBookDto.getName()).isNotNull();
             System.out.println(studentBookDto.getName());
@@ -24,4 +24,6 @@ class StudentRepositoryTest {
 
         });
     }
+
+
 }
