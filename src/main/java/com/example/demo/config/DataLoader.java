@@ -19,7 +19,10 @@ public class DataLoader {
     @Bean
     public ApplicationRunner applicationRunner() {
         return args -> {
-            bookRepository.save(new Book(1L, "Hippo", 9.99, "Hippo Study"));
+            bookRepository.save(new Book(1L,
+                    "Hippo",
+                    9.99,
+                    "Hippo Study"));
             studentRepository.save(Student.builder()
                             .id(1L)
                             .name("Hippo")
