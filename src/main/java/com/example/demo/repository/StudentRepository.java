@@ -10,5 +10,5 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query(value = "select Student.name, Book.title from Student inner join Book on Student.name = Book.author",
             nativeQuery = true)
-    List<StudentBookDtoInterface> findStudentBooks();
+    List<StudentBookDtoInterface> findStudentBooksDtoInterface();
 }
