@@ -14,7 +14,7 @@ class StudentRepositoryTest {
 
     @Test
     void shouldGetStudentBooksDtoInterface(@Autowired StudentRepository repository) {
-        repository.findStudentBooksDtoInterface().forEach(studentBookDto -> {
+        repository.findStudentBooks().forEach(studentBookDto -> {
 
             assertThat(studentBookDto.getName()).isNotNull();
             System.out.println(studentBookDto.getName());
